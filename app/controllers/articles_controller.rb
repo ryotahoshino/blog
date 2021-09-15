@@ -28,6 +28,7 @@ class ArticlesController < ApplicationController
       redirect_to @article, notice: '更新できました'
     else
       render :edit, alert: '更新できませんでした'
+    end
   end
 
   def destroy
@@ -42,5 +43,8 @@ class ArticlesController < ApplicationController
 
   def find_post
     @article = Article.find(params[:id])
+  end
+
+  def article_params
   end
 end
